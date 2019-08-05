@@ -1,0 +1,8 @@
+{
+  "name": "test-symfony",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alex-worker/test-symfony.git",
+  "author": "alex-worker <43813540+alex-worker@users.noreply.github.com>",
+  "license": "MIT"
+}
