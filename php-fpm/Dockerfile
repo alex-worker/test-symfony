@@ -1,4 +1,4 @@
-FROM phpdockerio/php72-fpm:latest
+FROM phpdockerio/php73-fpm:latest
 WORKDIR "/application"
 
 # Install selected extensions and other stuff
