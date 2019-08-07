@@ -6,3 +6,7 @@ docker-compose exec php-fpm bash - console on container
 chown 777 var 
 
 composer create-project symfony/website-skeleton
+
+To clear containers: docker rm -f $(docker ps -a -q)
+To clear images: docker rmi -f $(docker images -a -q)
+To clear volumes: docker volume rm $(docker volume ls -q)
