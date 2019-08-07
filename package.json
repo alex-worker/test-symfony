@@ -6,9 +6,12 @@
   "author": "alex-worker <43813540+alex-worker@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "build": "docker-compose build --force-rm",
     "up": "docker-compose up -d",
     "ps": "docker-compose ps",
+    "clearall": "utils/clearall.sh",
     "down": "docker-compose down",
-    "shell": "docker-compose exec --user 1000 php-fpm bash"
+    "shell": "docker-compose exec --user 1000 php-fpm bash",
+    "shell-root": "docker-compose exec php-fpm bash"
   }
 }
