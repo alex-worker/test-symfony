@@ -18,7 +18,7 @@ services:
       - ./app/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
       - ./app/website-skeleton:/application
       - var:/application/var
-      - vendor:/application/vendors
+      - vendor:/application/vendor
 volumes:
   var:
   vendor:

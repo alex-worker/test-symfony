@@ -6,6 +6,7 @@
   "author": "alex-worker <43813540+alex-worker@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "install-project": "utils/composer-install.sh",
     "build": "docker-compose build --force-rm",
     "up": "docker-compose up -d",
     "ps": "docker-compose ps",
