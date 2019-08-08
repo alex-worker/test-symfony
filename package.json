@@ -6,11 +6,12 @@
   "author": "alex-worker <43813540+alex-worker@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "install-project": "utils/composer-install.sh",
+    "project-install": "docker-compose exec php-fpm composer install",
+    "project-update": "docker-compose exec php-fpm composer install",
+    "clear-all": "utils/docker-rm-all.sh",
     "build": "docker-compose build --force-rm",
     "up": "docker-compose up -d",
     "ps": "docker-compose ps",
-    "clear-all": "utils/docker-rm-all.sh",
     "down": "docker-compose down",
     "shell": "docker-compose exec --user www-data php-fpm bash",
     "shell-root": "docker-compose exec php-fpm bash"
