@@ -5,6 +5,7 @@ RUN apt-get update \
 
 WORKDIR /application
 
-COPY ["../app/website-skeleton/composer.json", "/application/"]
+# USER www-data
 
-# RUN /usr/local/bin/composer install
+COPY ["./website-skeleton/composer.json", "/application/"]
+RUN /usr/local/bin/composer install
