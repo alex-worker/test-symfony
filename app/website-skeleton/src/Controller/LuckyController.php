@@ -18,4 +18,20 @@ class LuckyController extends AbstractController
             'number' => $number,
         ]);
     }
+
+    /**
+     * @Route(
+     *      "/lol/{number}",
+     *      requirements={
+     *          "number": "\d+",
+     *         }
+     * )
+     */
+    public function myNumber($number)
+    {
+        return $this->render('lucky/index.html.twig', [
+            'number' => $number,
+        ]);
+    }
+
 }
