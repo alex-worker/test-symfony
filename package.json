@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "project-install": "docker-compose exec php-fpm composer install",
-    "project-update": "docker-compose exec php-fpm composer install",
+    "project-update": "docker-compose exec php-fpm composer update",
     "clear-all": "utils/docker-rm-all.sh",
     "build": "docker-compose build --force-rm",
     "up": "docker-compose up -d",
