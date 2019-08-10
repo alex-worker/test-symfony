@@ -19,6 +19,22 @@ services:
       - ./app/website-skeleton:/application
       - var:/application/var
       - vendor:/application/vendor
+  db:
+    build:
+      context: ./database/
+    # dockerfile: Dockerfile-db
+    # image: postgres:alpine
+    volumes:
+      - ./database:/backup
+    restart: always
+    environment:
+      POSTGRES_USER: kpacku
+      POSTGRES_PASSWORD: kpacku
+      POSTGRES_DB: kpacku
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+
 volumes:
   var:
   vendor:
